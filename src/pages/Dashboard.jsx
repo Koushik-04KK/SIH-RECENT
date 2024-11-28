@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import fangif from "../assets/fangif.gif";
-
+// import emerge from "../assets/alarm.gif";
 
 // const BLYNK_AUTH_TOKEN = "YourAuthToken"; // Replace with your Blynk Auth Token
 // const BLYNK_API_URL = "https://blynk.cloud/external/api";
@@ -127,7 +127,7 @@ const Dashboard = () => {
         <div className="bg-customColor-rmcardbackground rounded-lg shadow-xl p-4 md:p-6 lg:p-8 w-full max-w-[1300px]">
           <div className="flex flex-wrap justify-center items-center mb-8 md:justify-between">
           <button
-            onClick={stopFan}
+            onClick={startFan}
             className={`${
               isFanOn? "bg-gray-400":"bg-[#387A79] hover:bg-teal-600"
             } text-white hidden md:block px-6 py-2 rounded-3xl transition-all duration-300`}
@@ -138,7 +138,7 @@ const Dashboard = () => {
             REALTIME METRICS
           </h1>
           <button
-            onClick={startFan}
+            onClick={stopFan}
             className={`${
               isFanOn? "bg-[#BE4848] hover:bg-red-600": "bg-gray-400"
             } text-white hidden md:block px-6 py-2 rounded-3xl transition-all duration-300`}
@@ -149,10 +149,12 @@ const Dashboard = () => {
           
           {/* Fault alert message */}
           {isFault && (
-  <div className="bg-red-600 text-white md:text-lg lg:text-xl text-center py-3 px-2 rounded-2xl mb-4 lg:mx-56 lg:mb-10 ">
-    Alert: A fault has been detected!
+  <div className="bg-red-600 text-white md:text-lg lg:text-xl text-center py-3 px-4 rounded-2xl mb-4 lg:mx-56 lg:mb-10 flex items-center justify-center space-x-4">
+    {/* <img src={emerge} alt="icons" className="h-10 w-10 rounded-full" /> */}
+    <span>Alert: A fault has been detected!</span>
   </div>
 )}
+
 
   
 <div className="fixed bottom-0 left-0 w-full bg-white shadow-lg z-50 md:hidden">

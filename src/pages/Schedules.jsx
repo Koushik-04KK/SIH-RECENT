@@ -155,7 +155,7 @@ const Schedules = () => {
               <h2 className="text-sm md:text-lg font-semibold">
                 TIME SINCE LAST MAINTENANCE
               </h2>
-              <div className="mt-4 h-[80px] md:h-[100px] rounded-lg flex items-center justify-center text-[35px] text-white">
+              <div className="mt-4 h-[80px] md:h-[100px] rounded-lg flex items-center justify-center text-[30px] md:text-[35px] text-white">
                 {timeSinceLastMaintenance}
               </div>
               <FaClock size={24} className="absolute top-5 right-4" />
