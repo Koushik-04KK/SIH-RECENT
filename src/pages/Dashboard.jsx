@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import fangif from "../assets/fangif.gif";
 
@@ -128,7 +129,7 @@ const Dashboard = () => {
           <button
             onClick={stopFan}
             className={`${
-              isFanOn? "bg-[#387A79] hover:bg-teal-600": "bg-gray-400"
+              isFanOn? "bg-gray-400":"bg-[#387A79] hover:bg-teal-600"
             } text-white hidden md:block px-6 py-2 rounded-3xl transition-all duration-300`}
           >
             Start Monitoring
@@ -139,7 +140,7 @@ const Dashboard = () => {
           <button
             onClick={startFan}
             className={`${
-              isFanOn? "bg-gray-400" : "bg-[#BE4848] hover:bg-red-600"
+              isFanOn? "bg-[#BE4848] hover:bg-red-600": "bg-gray-400"
             } text-white hidden md:block px-6 py-2 rounded-3xl transition-all duration-300`}
           >
             Stop Monitoring
